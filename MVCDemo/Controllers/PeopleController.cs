@@ -25,5 +25,11 @@ namespace MVCDemo.Controllers
 
             return View(people);
         }
+
+        public ActionResult Delete(List<PersonModel> people, int ID)
+        {
+            people.RemoveAt(ID);
+            return View();
+        }
     }
 }
